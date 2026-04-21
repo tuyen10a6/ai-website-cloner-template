@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash 
 
 set -euo pipefail
 
@@ -9,7 +9,13 @@ STANDALONE_DIR="$APP_ROOT/.next/standalone"
 cd "$APP_ROOT"
 
 echo "==> Pulling latest code"
-git pull
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+
+if git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >/dev/null 2>&1; then
+  git pull --ff-only
+else
+  git pull --ff-only origin "$CURRENT_BRANCH"
+fi
 
 echo "==> Installing dependencies"
 npm install
