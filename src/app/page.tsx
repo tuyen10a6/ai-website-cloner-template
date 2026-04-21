@@ -178,7 +178,7 @@ export default function Home() {
         id="home"
         className="relative h-screen overflow-hidden bg-white"
       >
-        <div className="absolute inset-0 hidden md:block">
+        <div className="absolute inset-0 hidden lg:block">
           <Image
             src="/images/dodo/home.png"
             alt="Dodomio robotics hero"
@@ -186,11 +186,10 @@ export default function Home() {
             priority
             sizes="100vw"
             unoptimized
-            className="object-contain object-[82%_center] md:object-contain md:object-[78%_center] lg:object-cover lg:object-[62%_center] xl:object-center"
+            className="object-contain object-[82%_center] md:object-contain md:object-[78%_center] lg:object-cover lg:object-[80%_center] xl:object-center"
           />
         </div>
-
-        <div className="relative h-full md:hidden">
+        <div className="relative h-full lg:hidden">
           <div className="absolute inset-0 overflow-hidden">
             <Image
               src="/images/dodo/home.png"
@@ -203,7 +202,7 @@ export default function Home() {
             />
           </div>
 
-          <header className="relative z-10 mx-auto flex max-w-[1600px] items-center justify-between px-6 py-8 sm:px-10">
+          <header className="relative z-10 mx-auto flex max-w-[1750px] items-center justify-between pl-0 pr-6 py-8 sm:px-10">
             <Link href="/" className="flex items-center gap-4">
               <Image
                 src="/images/dodo/dodomio-logo.png"
@@ -231,7 +230,7 @@ export default function Home() {
               mobileMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
-            <nav className="ml-auto flex max-w-[320px] flex-col gap-3 rounded-[28px] border border-white/30 bg-white/78 p-4 shadow-[0_18px_50px_rgba(126,94,171,0.10)] backdrop-blur-[14px]">
+            <nav className="ml-auto mt-6 flex max-w-[320px] flex-col gap-3 rounded-[28px] border border-white/30 bg-white/78 p-4 shadow-[0_18px_50px_rgba(126,94,171,0.10)] backdrop-blur-[14px]">
               {navigation.map((item) => (
                 <Link
                   key={item.label}
@@ -255,7 +254,7 @@ export default function Home() {
           <div className="h-full" aria-hidden="true" />
         </div>
 
-        <header className="relative z-10 mx-auto hidden max-w-[1600px] items-center justify-between px-6 py-8 sm:px-10 lg:flex lg:px-14 lg:py-10">
+        <header className="relative z-10 mx-auto hidden max-w-[1750px] items-center justify-between px-6 py-8 sm:px-10 lg:flex lg:px-14 lg:py-10">
           <Link href="/" className="flex items-center gap-4">
             <Image
               src="/images/dodo/dodomio-logo.png"
@@ -275,13 +274,13 @@ export default function Home() {
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
-          <div className="hidden items-center gap-12 lg:flex">
-            <nav className="flex items-center gap-12">
+          <div className="hidden items-center gap-8 lg:flex xl:gap-12">
+            <nav className="flex items-center gap-8 xl:gap-12">
               {navigation.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-[18px] font-normal text-white/95 transition-colors hover:text-white"
+                  className="text-[16px] font-normal text-white/95 transition-colors hover:text-white xl:text-[18px]"
                 >
                   {item.label}
                 </Link>
@@ -289,21 +288,21 @@ export default function Home() {
             </nav>
             <Link
               href="#contact"
-              className="inline-flex items-center bg-white px-8 py-4 text-[18px] font-semibold text-[#6d25c3] shadow-[0_16px_35px_rgba(86,33,163,0.16)] transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center bg-white px-6 py-3 text-[16px] font-semibold text-[#6d25c3] shadow-[0_16px_35px_rgba(86,33,163,0.16)] transition-transform hover:-translate-y-0.5 xl:px-8 xl:py-4 xl:text-[18px]"
             >
               Liên hệ
             </Link>
           </div>
         </header>
 
-        <div className="relative z-10 mx-auto hidden h-full max-w-[1600px] px-6 pb-16 pt-4 sm:px-10 sm:pb-20 md:pb-24 md:pt-8 lg:block lg:px-14 lg:pb-24 lg:pt-12">
-          <div className="w-full max-w-none rounded-[28px] bg-white/88 px-4 py-5 shadow-[0_18px_50px_rgba(126,94,171,0.08)] backdrop-blur-[3px] sm:px-6 sm:py-6 md:max-w-[500px] md:rounded-[32px] md:bg-white/76 lg:ml-[2px] lg:mt-8 lg:block lg:max-w-[620px] lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-0">
-            <h1 className="text-[32px] font-semibold leading-[0.95] tracking-[-0.065em] whitespace-nowrap text-[#232c37] sm:text-[64px] sm:whitespace-normal md:text-[72px] lg:text-[92px]">
+        <div className="relative z-10 mx-auto hidden h-full max-w-[1750px] px-6 pb-16 pt-4 sm:px-10 sm:pb-20 md:pb-24 md:pt-8 lg:block lg:px-14 lg:pb-24 lg:pt-12 xl:pt-12">
+          <div className="lg:mt-6 lg:max-w-[440px] xl:mt-0 xl:max-w-none">
+            <h1 className="text-[32px] font-semibold leading-[0.95] tracking-[-0.065em] whitespace-nowrap text-[#232c37] sm:text-[64px] sm:whitespace-normal md:text-[72px] lg:text-[64px] xl:text-[92px]">
               ROBOT{" "}
               <br className="hidden sm:block" />
               THÔNG MINH
             </h1>
-            <p className="mt-5 max-w-[36ch] text-[17px] leading-[1.8] text-[#6f7480] sm:mt-6 sm:text-[18px] md:text-[19px] md:leading-[1.85] lg:max-w-[660px] lg:text-[21px] lg:leading-[1.9]">
+            <p className="mt-5 max-w-[36ch] text-[17px] leading-[1.8] text-[#6f7480] sm:mt-6 sm:text-[18px] md:text-[19px] md:leading-[1.85] lg:max-w-[28ch] lg:text-[17px] lg:leading-[1.7] xl:max-w-[660px] xl:text-[21px] xl:leading-[1.9]">
               Dodomio là robot AI tương tác dành cho giáo dục, gia đình và các tổ chức hiện đại,
               kết hợp trải nghiệm trực quan với năng lực AI để học tập, giao tiếp và hỗ trợ vận hành.
             </p>
@@ -339,9 +338,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="solutions" className="bg-[linear-gradient(180deg,#ffffff_0%,#f7f0ff_100%)] py-24">
+      <section id="solutions" className="bg-[linear-gradient(180deg,#ffffff_0%,#f7f0ff_100%)] py-3">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-8">
-          <div className="max-w-[760px]">
+          <div>
             <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#8a47eb]">
               Sản phẩm & giải pháp
             </p>
@@ -349,8 +348,10 @@ export default function Home() {
               Hệ sinh thái sản phẩm tập trung vào robot tương tác và AI ứng dụng thực tế.
             </h2>
             <p className="mt-5 text-[18px] leading-8 text-[#6a5c82]">
-              Dodomio mang đến robot AI cho trải nghiệm trực tiếp, Công chức.ai cho xử lý nghiệp vụ
-              văn bản, và BMP.AI cho tư vấn triển khai AI theo nhu cầu từng tổ chức.
+              Dodomio mang đến robot AI cho trải nghiệm trực tiếp, giúp trẻ em, gia đình, nhà trường
+              và tổ chức tương tác với công nghệ theo cách gần gũi, sinh động và dễ triển khai hơn;
+              đồng thời Công chức.ai hỗ trợ xử lý nghiệp vụ văn bản, còn BMP.AI cung cấp tư vấn và
+              triển khai AI theo nhu cầu thực tế của từng đơn vị.
             </p>
           </div>
 
@@ -518,7 +519,7 @@ export default function Home() {
 
       <section id="about" className="bg-[linear-gradient(180deg,#f9f4ff_0%,#ffffff_100%)] py-24">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-8">
-          <div className="max-w-[780px]">
+          <div>
             <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#8a47eb]">Giới thiệu</p>
             <h2 className="mt-4 text-[38px] font-semibold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
               DODOMIO xây dựng robot và giải pháp AI với trọng tâm là tính ứng dụng, trải nghiệm thân thiện và khả năng triển khai thật.
