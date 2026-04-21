@@ -176,7 +176,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#fcfbff] text-[#24153a]">
       <section
         id="home"
-        className="relative overflow-hidden bg-white"
+        className="relative h-screen overflow-hidden bg-white"
       >
         <div className="absolute inset-0 hidden md:block">
           <Image
@@ -185,23 +185,22 @@ export default function Home() {
             fill
             priority
             sizes="100vw"
+            unoptimized
             className="object-contain object-[82%_center] md:object-contain md:object-[78%_center] lg:object-cover lg:object-[62%_center] xl:object-center"
           />
         </div>
 
-        <div className="absolute inset-0 hidden md:block bg-[linear-gradient(180deg,rgba(255,255,255,0.82)_0%,rgba(255,255,255,0.42)_42%,rgba(255,255,255,0.16)_70%,rgba(255,255,255,0.06)_100%)] md:bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.90)_42%,rgba(255,255,255,0.58)_58%,rgba(255,255,255,0.18)_74%,rgba(255,255,255,0)_100%)] lg:bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0.98)_39%,rgba(255,255,255,0.54)_56%,rgba(255,255,255,0.10)_72%,rgba(255,255,255,0)_100%)]" />
-
-        <div className="relative md:hidden">
-          <div className="absolute inset-x-0 top-0 h-[420px] overflow-hidden">
+        <div className="relative h-full md:hidden">
+          <div className="absolute inset-0 overflow-hidden">
             <Image
               src="/images/dodo/home.png"
               alt="Dodomio robotics hero"
               fill
               priority
               sizes="100vw"
+              unoptimized
               className="object-cover object-[74%_center]"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.82)_55%,rgba(255,255,255,0.46)_78%,rgba(255,255,255,0.20)_100%)]" />
           </div>
 
           <header className="relative z-10 mx-auto flex max-w-[1600px] items-center justify-between px-6 py-8 sm:px-10">
@@ -211,7 +210,6 @@ export default function Home() {
                 alt="DODOMIO Robotics"
                 width={240}
                 height={120}
-                className="h-[75px] w-[150px] sm:h-[95px] sm:w-[190px]"
                 priority
               />
             </Link>
@@ -254,7 +252,7 @@ export default function Home() {
             </nav>
           </div>
 
-          <div className="h-[300px] sm:h-[340px]" aria-hidden="true" />
+          <div className="h-full" aria-hidden="true" />
         </div>
 
         <header className="relative z-10 mx-auto hidden max-w-[1600px] items-center justify-between px-6 py-8 sm:px-10 lg:flex lg:px-14 lg:py-10">
@@ -264,7 +262,6 @@ export default function Home() {
               alt="DODOMIO Robotics"
               width={240}
               height={120}
-              className="h-[75px] w-[150px] sm:h-[95px] sm:w-[190px] lg:h-[120px] lg:w-[240px]"
               priority
             />
           </Link>
@@ -299,7 +296,7 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="relative z-10 mx-auto max-w-[1600px] px-6 pb-16 pt-4 sm:px-10 sm:pb-20 md:min-h-[700px] md:pb-24 md:pt-8 lg:px-14 lg:pb-24 lg:pt-12 xl:min-h-[820px]">
+        <div className="relative z-10 mx-auto hidden h-full max-w-[1600px] px-6 pb-16 pt-4 sm:px-10 sm:pb-20 md:pb-24 md:pt-8 lg:block lg:px-14 lg:pb-24 lg:pt-12">
           <div className="w-full max-w-none rounded-[28px] bg-white/88 px-4 py-5 shadow-[0_18px_50px_rgba(126,94,171,0.08)] backdrop-blur-[3px] sm:px-6 sm:py-6 md:max-w-[500px] md:rounded-[32px] md:bg-white/76 lg:ml-[2px] lg:mt-8 lg:block lg:max-w-[620px] lg:bg-transparent lg:p-0 lg:shadow-none lg:backdrop-blur-0">
             <h1 className="text-[32px] font-semibold leading-[0.95] tracking-[-0.065em] whitespace-nowrap text-[#232c37] sm:text-[64px] sm:whitespace-normal md:text-[72px] lg:text-[92px]">
               ROBOT{" "}
