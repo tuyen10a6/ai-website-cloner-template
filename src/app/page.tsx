@@ -274,7 +274,10 @@ export default function Home() {
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
-          <div className="hidden items-center gap-8 lg:flex xl:gap-12">
+          <div
+            className="hidden items-center gap-8 lg:flex xl:gap-12"
+            
+          >
             <nav className="flex items-center gap-8 xl:gap-12">
               {navigation.map((item) => (
                 <Link
@@ -295,14 +298,18 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="relative z-10 mx-auto hidden h-full max-w-[1750px] px-6 pb-16 pt-4 sm:px-10 sm:pb-20 md:pb-24 md:pt-8 lg:block lg:px-14 lg:pb-24 lg:pt-12 xl:pt-12">
+        <div className="relative z-10 mx-auto hidden h-full max-w-[1750px] px-6 pb-16 pt-0 sm:px-10 sm:pb-20 md:pb-24 md:pt-8 lg:block lg:px-14 lg:pb-24 lg:pt-0 xl:pt-0">
           <div className="lg:mt-6 lg:max-w-[440px] xl:mt-0 xl:max-w-none">
-            <h1 className="text-[32px] font-semibold leading-[0.95] tracking-[-0.065em] whitespace-nowrap text-[#232c37] sm:text-[64px] sm:whitespace-normal md:text-[72px] lg:text-[64px] xl:text-[92px]">
+            <h1
+             className="text-[32px] font-semibold leading-[0.95] tracking-[-0.065em] whitespace-nowrap text-[#232c37] sm:text-[64px] sm:whitespace-normal md:text-[72px] lg:text-[64px] xl:text-[74px]">
               ROBOT{" "}
               <br className="hidden sm:block" />
-              THÔNG MINH
+              <span className="mt-[15px] inline-flex items-center gap-[0.18em]">
+                <span>THÔNG</span>
+                <span>MINH</span>
+              </span>
             </h1>
-            <p className="mt-5 max-w-[36ch] text-[17px] leading-[1.8] text-[#6f7480] sm:mt-6 sm:text-[18px] md:text-[19px] md:leading-[1.85] lg:max-w-[28ch] lg:text-[17px] lg:leading-[1.7] xl:max-w-[660px] xl:text-[21px] xl:leading-[1.9]">
+                     <p  className="mt-5 max-w-[36ch] text-[17px] leading-[1.8] text-[#6f7480] sm:mt-6 sm:text-[18px] md:text-[19px] md:leading-[1.85] lg:max-w-[28ch] lg:text-[17px] lg:leading-[1.7] xl:max-w-[660px] xl:text-[21px] xl:leading-[1.9]">
               Dodomio là robot AI tương tác dành cho giáo dục, gia đình và các tổ chức hiện đại,
               kết hợp trải nghiệm trực quan với năng lực AI để học tập, giao tiếp và hỗ trợ vận hành.
             </p>

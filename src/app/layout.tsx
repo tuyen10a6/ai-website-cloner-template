@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
+import { Jost, Poppins } from "next/font/google";
 import "./globals.css";
+
+const jost = Jost({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-jost",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "DODOMIO Robotics",
@@ -16,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" suppressHydrationWarning>
-      <body className="antialiased">
+      <body className={`${jost.variable} ${poppins.variable} antialiased`}>
         {children}
       </body>
     </html>
