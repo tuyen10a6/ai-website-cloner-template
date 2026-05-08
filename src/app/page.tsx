@@ -274,10 +274,7 @@ export default function Home() {
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
-          <div
-            className="hidden items-center gap-8 lg:flex xl:gap-12"
-            
-          >
+          <div className="hidden items-center gap-8 lg:flex xl:gap-12">
             <nav className="flex items-center gap-8 xl:gap-12">
               {navigation.map((item) => (
                 <Link
@@ -301,7 +298,8 @@ export default function Home() {
         <div className="relative z-10 mx-auto hidden h-full max-w-[1750px] px-6 pb-16 pt-0 sm:px-10 sm:pb-20 md:pb-24 md:pt-8 lg:block lg:px-14 lg:pb-24 lg:pt-0 xl:pt-0">
           <div className="lg:mt-6 lg:max-w-[440px] xl:mt-0 xl:max-w-none">
             <h1
-             className="text-[32px] font-semibold leading-[0.95] tracking-[-0.065em] whitespace-nowrap text-[#232c37] sm:text-[64px] sm:whitespace-normal md:text-[72px] lg:text-[64px] xl:text-[74px]">
+             className="font-heading text-[32px] font-black leading-[0.95] whitespace-nowrap text-[#232c37] sm:text-[64px] sm:whitespace-normal md:text-[72px] lg:text-[64px] xl:text-[74px]"
+             style={{ letterSpacing: "0.5px" }}>
               ROBOT{" "}
               <br className="hidden sm:block" />
               <span className="mt-[15px] inline-flex items-center gap-[0.18em]">
@@ -317,7 +315,7 @@ export default function Home() {
             <div className="mt-7 flex flex-col gap-4 sm:mt-8 sm:flex-row">
               <Link
                 href="#contact"
-                className="inline-flex w-fit items-center justify-center bg-[#8b58d6] px-8 py-4 text-[17px] font-semibold text-white shadow-[0_22px_40px_rgba(138,82,213,0.28)] transition-transform hover:-translate-y-0.5 sm:px-9 sm:py-5 sm:text-[18px]"
+                className="inline-flex w-fit items-center justify-center bg-[#8b58d6] px-8 py-4 text-[17px] font-semibold text-white shadow-[0_22px_40px_rgba(138,82,213,0.28)] transition-transform hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-[18px]"
               >
                 Tìm hiểu thêm
               </Link>
@@ -337,7 +335,7 @@ export default function Home() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f1e8ff] text-[#7a2ee6]">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h2 className="mt-4 text-[22px] font-semibold tracking-[-0.03em] text-[#23123a]">{title}</h2>
+                <h2 className="font-heading mt-4 text-[22px] font-extrabold tracking-[-0.03em] text-[#23123a]">{title}</h2>
                 <p className="mt-3 text-[15px] leading-7 text-[#65577e]">{description}</p>
               </div>
             ))}
@@ -351,7 +349,7 @@ export default function Home() {
             <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#8a47eb]">
               Sản phẩm & giải pháp
             </p>
-            <h2 className="mt-4 text-[38px] font-semibold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
+            <h2 className="font-heading mt-4 text-[38px] font-extrabold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
               Hệ sinh thái sản phẩm tập trung vào robot tương tác và AI ứng dụng thực tế.
             </h2>
             <p className="mt-5 text-[18px] leading-8 text-[#6a5c82]">
@@ -374,7 +372,7 @@ export default function Home() {
                 <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#8a47eb]">
                   {subtitle}
                 </p>
-                <h3 className="mt-3 text-[28px] font-semibold tracking-[-0.04em] text-[#23123a]">{title}</h3>
+                <h3 className="font-heading mt-3 text-[28px] font-extrabold tracking-[-0.04em] text-[#23123a]">{title}</h3>
                 <p className="mt-4 text-[16px] leading-8 text-[#66577f]">{description}</p>
                 <ul className="mt-6 space-y-3">
                   {bullets.map((bullet) => (
@@ -397,7 +395,7 @@ export default function Home() {
               <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#8a47eb]">
                 Use case nổi bật
               </p>
-              <h2 className="mt-4 text-[38px] font-semibold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
+              <h2 className="font-heading mt-4 text-[38px] font-extrabold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
                 Một sản phẩm, nhiều ứng dụng rõ ràng và dễ hình dung ngay từ lần xem đầu tiên.
               </h2>
             </div>
@@ -415,7 +413,7 @@ export default function Home() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f4ebff] text-[#7a2ee6]">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 text-[24px] font-semibold tracking-[-0.03em] text-[#26163d]">{title}</h3>
+                <h3 className="font-heading mt-5 text-[24px] font-extrabold tracking-[-0.03em] text-[#26163d]">{title}</h3>
                 <p className="mt-3 text-[16px] leading-8 text-[#6a5c82]">{description}</p>
               </div>
             ))}
@@ -429,7 +427,7 @@ export default function Home() {
             <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#d5b4ff]">
               Giới thiệu Robot Dodomio
             </p>
-            <h2 className="mt-4 text-[40px] font-semibold leading-tight tracking-[-0.04em] sm:text-[54px]">
+            <h2 className="font-heading mt-4 text-[40px] font-black leading-tight tracking-[-0.04em] sm:text-[54px]">
               Dodomio là robot AI có thể trò chuyện, hướng dẫn, kể chuyện và tạo kết nối tự nhiên với người dùng.
             </h2>
             <p className="mt-5 max-w-[520px] text-[18px] leading-8 text-[#e7d8ff]">
@@ -471,7 +469,7 @@ export default function Home() {
               <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#8a47eb]">
                 Khách hàng & case thành công
               </p>
-              <h2 className="mt-4 text-[38px] font-semibold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
+              <h2 className="font-heading mt-4 text-[38px] font-extrabold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
                 Kết quả thực tế giúp khách hàng thấy rõ hiệu quả của mô hình robot kết hợp AI.
               </h2>
             </div>
@@ -489,7 +487,7 @@ export default function Home() {
                 <MessageSquareText className="h-8 w-8 text-[#8a47eb]" />
                 <p className="mt-5 text-[18px] leading-8 text-[#4a3a64]">“{quote}”</p>
                 <footer className="mt-8">
-                  <div className="text-[18px] font-semibold text-[#23123a]">{name}</div>
+                  <div className="font-heading text-[18px] font-extrabold text-[#23123a]">{name}</div>
                   <div className="mt-1 text-[14px] font-medium uppercase tracking-[0.12em] text-[#8a7aa7]">
                     {role}
                   </div>
@@ -505,7 +503,7 @@ export default function Home() {
                 className="rounded-[30px] bg-[linear-gradient(135deg,#f7efff,#ffffff)] p-8 shadow-[0_20px_55px_rgba(77,39,146,0.06)]"
               >
                 <div className="text-[56px] font-semibold tracking-[-0.06em] text-[#7a2ee6]">{value}</div>
-                <h3 className="mt-3 text-[24px] font-semibold tracking-[-0.03em] text-[#26163d]">{title}</h3>
+                <h3 className="font-heading mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#26163d]">{title}</h3>
                 <p className="mt-3 text-[16px] leading-8 text-[#6a5c82]">{description}</p>
               </div>
             ))}
@@ -528,7 +526,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-8">
           <div>
             <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#8a47eb]">Giới thiệu</p>
-            <h2 className="mt-4 text-[38px] font-semibold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
+            <h2 className="font-heading mt-4 text-[38px] font-extrabold leading-tight tracking-[-0.04em] text-[#23123a] sm:text-[52px]">
               DODOMIO xây dựng robot và giải pháp AI với trọng tâm là tính ứng dụng, trải nghiệm thân thiện và khả năng triển khai thật.
             </h2>
           </div>
@@ -542,7 +540,7 @@ export default function Home() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f0e6ff] text-[#7a2ee6]">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 text-[24px] font-semibold tracking-[-0.03em] text-[#26163d]">{title}</h3>
+                <h3 className="font-heading mt-5 text-[24px] font-extrabold tracking-[-0.03em] text-[#26163d]">{title}</h3>
                 <p className="mt-3 text-[16px] leading-8 text-[#6a5c82]">{description}</p>
               </div>
             ))}
@@ -555,7 +553,7 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
             <div className="rounded-[34px] bg-[#2c1249] p-8 text-white shadow-[0_30px_80px_rgba(44,18,73,0.25)] sm:p-10">
               <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#d5b4ff]">Liên hệ / Demo</p>
-              <h2 className="mt-4 text-[40px] font-semibold leading-tight tracking-[-0.04em]">
+              <h2 className="font-heading mt-4 text-[40px] font-black leading-tight tracking-[-0.04em]">
                 Đăng ký demo để trải nghiệm trực tiếp Robot Dodomio và tư vấn giải pháp AI phù hợp.
               </h2>
               <p className="mt-5 text-[17px] leading-8 text-[#eadcff]">

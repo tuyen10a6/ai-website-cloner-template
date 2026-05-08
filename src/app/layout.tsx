@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Jost, Poppins } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const jost = Jost({
+const roboto = Roboto({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-jost",
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
   display: "swap",
 });
 
@@ -30,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" suppressHydrationWarning>
-      <body className={`${jost.variable} ${poppins.variable} antialiased`}>
+      <body className={`${roboto.variable} antialiased`}>
         {children}
       </body>
     </html>
