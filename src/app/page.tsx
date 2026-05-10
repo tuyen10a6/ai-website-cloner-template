@@ -9,13 +9,18 @@ import {
   BrainCircuit,
   BriefcaseBusiness,
   FileText,
+  Globe,
   GraduationCap,
   HandHelping,
   HeartHandshake,
   LayoutTemplate,
+  Mail,
   MessageSquareText,
+  MapPin,
   Mic,
   Menu,
+  MessageCircle,
+  Phone,
   Rocket,
   ScanText,
   ShieldCheck,
@@ -84,25 +89,30 @@ const testimonials = [
       "Dodomio giúp chúng tôi trình diễn một câu chuyện AI rất dễ hiểu: có robot thật, có use case thật và khách hàng cảm nhận được giá trị ngay.",
     name: "Khối đổi mới sáng tạo",
     role: "Đối tác triển khai giáo dục",
+    image: "/images/company/company_one.jpg",
+    imageAlt: "Khối đổi mới sáng tạo",
   },
   {
     quote:
       "Công chức.ai rút ngắn đáng kể thời gian đọc hồ sơ và chuẩn bị biên bản. Đội ngũ làm việc nhanh hơn nhưng vẫn giữ được kiểm soát nội dung.",
     name: "Ban vận hành",
     role: "Khách hàng khu vực công",
+    image: "/images/company/company_two.jpg",
+    imageAlt: "Ban vận hành",
   },
   {
     quote:
       "Điểm mạnh của DODOMIO là kết hợp hardware và AI thành một trải nghiệm liền mạch, chứ không chỉ là chatbot hoặc robot đơn lẻ.",
     name: "Đối tác chiến lược",
     role: "Hệ sinh thái chuyển đổi số",
+    image: "/images/company/company_three.jpg",
+    imageAlt: "Đối tác chiến lược",
   },
 ];
 
 const productCards = [
   {
     title: "Robot AI Dodomio",
-    subtitle: "Sản phẩm chủ lực",
     description:
       "Robot tương tác với khả năng trò chuyện, hiển thị nội dung, gợi ý hoạt động, kể chuyện và đồng hành cùng người dùng trong nhiều bối cảnh.",
     bullets: ["Giáo dục", "Trợ lý", "Mẹ & bé", "Tính năng AI mở rộng"],
@@ -110,7 +120,6 @@ const productCards = [
   },
   {
     title: "Công chức.ai",
-    subtitle: "AI cho nghiệp vụ",
     description:
       "Bộ công cụ AI dành cho đọc hiểu, tóm tắt văn bản, dự thảo nội dung, lên slide/báo cáo và tạo biên bản họp cho đội ngũ hành chính.",
     bullets: ["Tóm tắt văn bản", "Dự thảo nội dung", "Slide / báo cáo", "Biên bản họp"],
@@ -118,10 +127,16 @@ const productCards = [
   },
   {
     title: "BMP.AI",
-    subtitle: "Dịch vụ AI",
     description:
-      "Tư vấn, triển khai và tích hợp AI vào quy trình hiện hữu của doanh nghiệp, từ chiến lược đến hệ thống vận hành thực tế.",
-    bullets: ["Tư vấn AI", "Tích hợp hệ thống", "Thiết kế use case", "Đồng hành triển khai"],
+      "Nền tảng và năng lực triển khai AI của DODOMIO, dùng để xây dựng các giải pháp phù hợp với từng tổ chức từ dữ liệu, quy trình đến trải nghiệm người dùng cuối.",
+    bullets: ["Nền tảng triển khai", "Thiết kế workflow AI", "Kết nối dữ liệu", "Giải pháp theo nhu cầu"],
+    icon: BrainCircuit,
+  },
+  {
+    title: "Dịch vụ AI",
+    description:
+      "Dịch vụ tư vấn và tích hợp AI cho doanh nghiệp: khảo sát hiện trạng, xác định bài toán ưu tiên, chọn use case khả thi và đưa AI vào website, CRM, ERP, tổng đài hoặc quy trình nội bộ.",
+    bullets: ["Khảo sát quy trình", "Tư vấn lộ trình AI", "Tích hợp hệ thống sẵn có", "Đo hiệu quả & tối ưu"],
     icon: Sparkles,
   },
 ];
@@ -166,6 +181,29 @@ const companyPillars = [
     title: "Năng lực AI",
     description: "Thiết kế use case, tinh chỉnh quy trình, xây hệ thống trợ lý và tích hợp vào hành trình vận hành hiện có.",
     icon: ShieldCheck,
+  },
+];
+
+const footerContacts = [
+  {
+    label: "Cầu Giấy, Hà Nội",
+    icon: MapPin,
+  },
+  {
+    label: "0853675166",
+    icon: Phone,
+  },
+  {
+    label: "dodo.stepup.edu.vn",
+    icon: Globe,
+  },
+  {
+    label: "dodorobot@stepup.edu.vn",
+    icon: Mail,
+  },
+  {
+    label: "Zalo OA: https://zalo.me/robotdodo",
+    icon: MessageCircle,
   },
 ];
 
@@ -230,13 +268,13 @@ export default function Home() {
               mobileMenuOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
             }`}
           >
-            <nav className="ml-auto mt-6 flex max-w-[320px] flex-col gap-3 rounded-[28px] border border-white/30 bg-white/78 p-4 shadow-[0_18px_50px_rgba(126,94,171,0.10)] backdrop-blur-[14px]">
+            <nav className="ml-auto mt-6 flex max-w-[320px] flex-col gap-3 rounded-[14px] border border-white/30 bg-white/78 p-4 shadow-[0_18px_50px_rgba(126,94,171,0.10)] backdrop-blur-[14px]">
               {navigation.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="rounded-2xl border border-[#eadcff] bg-white/90 px-4 py-3 text-[15px] font-semibold text-[#412a66] transition-colors hover:bg-[#f5edff]"
+                  className="rounded-[8px] border border-[#eadcff] bg-white/90 px-4 py-3 text-[15px] font-semibold text-[#412a66] transition-colors hover:bg-[#f5edff]"
                 >
                   {item.label}
                 </Link>
@@ -244,7 +282,7 @@ export default function Home() {
               <Link
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="rounded-2xl bg-[#8b58d6] px-4 py-3 text-[15px] font-semibold text-white"
+                className="rounded-[8px] bg-[#8b58d6] px-4 py-3 text-[15px] font-semibold text-white"
               >
                 Liên hệ
               </Link>
@@ -288,7 +326,7 @@ export default function Home() {
             </nav>
             <Link
               href="#contact"
-              className="inline-flex items-center bg-white px-6 py-3 text-[16px] font-semibold text-[#6d25c3] shadow-[0_16px_35px_rgba(86,33,163,0.16)] transition-transform hover:-translate-y-0.5 xl:px-8 xl:py-4 xl:text-[18px]"
+              className="inline-flex items-center bg-white px-6 py-3 text-[16px] font-semibold text-[#6d25c3] shadow-[0_16px_35px_rgba(86,33,163,0.16)] transition-transform hover:-translate-y-0.5 xl:px-6 xl:py-3 xl:text-[18px]"
             >
               Liên hệ
             </Link>
@@ -314,8 +352,8 @@ export default function Home() {
 
             <div className="mt-7 flex flex-col gap-4 sm:mt-8 sm:flex-row">
               <Link
-                href="#contact"
-                className="inline-flex w-fit items-center justify-center bg-[#8b58d6] px-8 py-4 text-[17px] font-semibold text-white shadow-[0_22px_40px_rgba(138,82,213,0.28)] transition-transform hover:-translate-y-0.5 sm:px-6 sm:py-3 sm:text-[18px]"
+                href="#solutions"
+                className="inline-flex w-fit items-center justify-center bg-[#8b58d6] px-8 py-4 text-[17px] font-semibold text-white shadow-[0_22px_40px_rgba(138,82,213,0.28)] transition-transform hover:-translate-y-0.5 sm:px-4 sm:py-2 sm:text-[18px]"
               >
                 Tìm hiểu thêm
               </Link>
@@ -330,9 +368,9 @@ export default function Home() {
             {pillars.map(({ title, description, icon: Icon }) => (
               <div
                 key={title}
-                className="rounded-[28px] border border-[#ecdfff] bg-white p-6 shadow-[0_22px_60px_rgba(86,40,163,0.08)]"
+                className="rounded-[14px] border border-[#ecdfff] bg-white p-6 shadow-[0_22px_60px_rgba(86,40,163,0.08)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f1e8ff] text-[#7a2ee6]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#f1e8ff] text-[#7a2ee6]">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h2 className="font-heading mt-4 text-[22px] font-extrabold tracking-[-0.03em] text-[#23123a]">{title}</h2>
@@ -355,23 +393,21 @@ export default function Home() {
             <p className="mt-5 text-[18px] leading-8 text-[#6a5c82]">
               Dodomio mang đến robot AI cho trải nghiệm trực tiếp, giúp trẻ em, gia đình, nhà trường
               và tổ chức tương tác với công nghệ theo cách gần gũi, sinh động và dễ triển khai hơn;
-              đồng thời Công chức.ai hỗ trợ xử lý nghiệp vụ văn bản, còn BMP.AI cung cấp tư vấn và
-              triển khai AI theo nhu cầu thực tế của từng đơn vị.
+              đồng thời Công chức.ai hỗ trợ xử lý nghiệp vụ văn bản, BMP.AI đóng vai trò nền tảng
+              triển khai, còn Dịch vụ AI tập trung vào tư vấn lộ trình và tích hợp AI vào vận hành thực tế của từng đơn vị.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {productCards.map(({ title, subtitle, description, bullets, icon: Icon }) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-2">
+            {productCards.map(({ title, description, bullets, icon: Icon }) => (
               <article
                 key={title}
-                className="rounded-[32px] border border-[#eadcff] bg-white p-8 shadow-[0_20px_60px_rgba(87,41,160,0.08)]"
+                className="rounded-[8px] border border-[#eadcff] bg-white p-8 shadow-[0_20px_60px_rgba(87,41,160,0.08)]"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f0e6ff] text-[#7a2ee6]">
+                <div className="flex h-14 w-14 items-center justify-center rounded-[4px] bg-[#f0e6ff] text-[#7a2ee6]">
                   <Icon className="h-7 w-7" />
                 </div>
-                <p className="mt-6 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#8a47eb]">
-                  {subtitle}
-                </p>
+              
                 <h3 className="font-heading mt-3 text-[28px] font-extrabold tracking-[-0.04em] text-[#23123a]">{title}</h3>
                 <p className="mt-4 text-[16px] leading-8 text-[#66577f]">{description}</p>
                 <ul className="mt-6 space-y-3">
@@ -408,9 +444,9 @@ export default function Home() {
             {homeUseCases.map(({ title, description, icon: Icon }) => (
               <div
                 key={title}
-                className="rounded-[28px] border border-[#eee5ff] bg-white p-7 shadow-[0_20px_50px_rgba(76,39,146,0.06)]"
+                className="rounded-[14px] border border-[#eee5ff] bg-white p-7 shadow-[0_20px_50px_rgba(76,39,146,0.06)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f4ebff] text-[#7a2ee6]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#f4ebff] text-[#7a2ee6]">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-heading mt-5 text-[24px] font-extrabold tracking-[-0.03em] text-[#26163d]">{title}</h3>
@@ -450,13 +486,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.22)]">
+          <div className="relative overflow-hidden rounded-[18px] border border-white/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-4 shadow-[0_30px_80px_rgba(0,0,0,0.22)]">
             <Image
               src="/images/dodo/home.png"
               alt="Robot Dodomio"
               width={1762}
               height={1009}
-              className="h-auto w-full rounded-[28px]"
+              className="h-auto w-full rounded-[14px]"
             />
           </div>
         </div>
@@ -479,10 +515,10 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {testimonials.map(({ quote, name, role }) => (
+            {testimonials.map(({ quote, name, role, image, imageAlt }) => (
               <blockquote
                 key={name}
-                className="rounded-[30px] border border-[#ede2ff] bg-white p-8 shadow-[0_20px_55px_rgba(77,39,146,0.06)]"
+                className="overflow-hidden rounded-[7.5px] border border-[#ede2ff] bg-white p-8 shadow-[0_20px_55px_rgba(77,39,146,0.06)]"
               >
                 <MessageSquareText className="h-8 w-8 text-[#8a47eb]" />
                 <p className="mt-5 text-[18px] leading-8 text-[#4a3a64]">“{quote}”</p>
@@ -490,6 +526,16 @@ export default function Home() {
                   <div className="font-heading text-[18px] font-extrabold text-[#23123a]">{name}</div>
                   <div className="mt-1 text-[14px] font-medium uppercase tracking-[0.12em] text-[#8a7aa7]">
                     {role}
+                  </div>
+                  <div className="mt-6 flex aspect-[4/3] items-center justify-center rounded-[6px] p-4">
+                    <Image
+                      src={image}
+                      alt={imageAlt}
+                      width={1200}
+                      height={800}
+                      unoptimized
+                      className="h-[90%] w-[75%] object-contain"
+                    />
                   </div>
                 </footer>
               </blockquote>
@@ -500,7 +546,7 @@ export default function Home() {
             {caseResults.map(({ value, title, description }) => (
               <div
                 key={title}
-                className="rounded-[30px] bg-[linear-gradient(135deg,#f7efff,#ffffff)] p-8 shadow-[0_20px_55px_rgba(77,39,146,0.06)]"
+                className="rounded-[15px] bg-[linear-gradient(135deg,#f7efff,#ffffff)] p-8 shadow-[0_20px_55px_rgba(77,39,146,0.06)]"
               >
                 <div className="text-[56px] font-semibold tracking-[-0.06em] text-[#7a2ee6]">{value}</div>
                 <h3 className="font-heading mt-3 text-[24px] font-extrabold tracking-[-0.03em] text-[#26163d]">{title}</h3>
@@ -513,7 +559,7 @@ export default function Home() {
             {customerLogos.map((logo) => (
               <div
                 key={logo}
-                className="flex min-h-[92px] items-center justify-center rounded-[24px] border border-[#ede3ff] bg-white px-4 text-center text-[20px] font-semibold tracking-[-0.03em] text-[#7b6d95]"
+                className="flex min-h-[92px] items-center justify-center rounded-[12px] border border-[#ede3ff] bg-white px-4 text-center text-[20px] font-semibold tracking-[-0.03em] text-[#7b6d95]"
               >
                 {logo}
               </div>
@@ -535,9 +581,9 @@ export default function Home() {
             {companyPillars.map(({ title, description, icon: Icon }) => (
               <div
                 key={title}
-                className="rounded-[30px] border border-[#ebe0ff] bg-white p-7 shadow-[0_20px_55px_rgba(77,39,146,0.06)]"
+                className="rounded-[15px] border border-[#ebe0ff] bg-white p-7 shadow-[0_20px_55px_rgba(77,39,146,0.06)]"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#f0e6ff] text-[#7a2ee6]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#f0e6ff] text-[#7a2ee6]">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-heading mt-5 text-[24px] font-extrabold tracking-[-0.03em] text-[#26163d]">{title}</h3>
@@ -551,7 +597,7 @@ export default function Home() {
       <section id="contact" className="py-24">
         <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
-            <div className="rounded-[34px] bg-[#2c1249] p-8 text-white shadow-[0_30px_80px_rgba(44,18,73,0.25)] sm:p-10">
+            <div className="rounded-[17px] bg-[#2c1249] p-8 text-white shadow-[0_30px_80px_rgba(44,18,73,0.25)] sm:p-10">
               <p className="text-[14px] font-semibold uppercase tracking-[0.2em] text-[#d5b4ff]">Liên hệ / Demo</p>
               <h2 className="font-heading mt-4 text-[40px] font-black leading-tight tracking-[-0.04em]">
                 Đăng ký demo để trải nghiệm trực tiếp Robot Dodomio và tư vấn giải pháp AI phù hợp.
@@ -561,7 +607,7 @@ export default function Home() {
               </p>
 
               <div className="mt-8 space-y-5">
-                <div className="rounded-[24px] border border-white/10 bg-white/5 p-5">
+                <div className="rounded-[12px] border border-white/10 bg-white/5 p-5">
                   <div className="flex items-center gap-3 text-[18px] font-semibold">
                     <Mic className="h-5 w-5 text-[#d5b4ff]" />
                     Demo robot Dodomio
@@ -570,7 +616,7 @@ export default function Home() {
                     Đăng ký lịch trải nghiệm robot, kịch bản kể chuyện, giáo dục tương tác và trình diễn AI tại sự kiện.
                   </p>
                 </div>
-                <div className="rounded-[24px] border border-white/10 bg-white/5 p-5">
+                <div className="rounded-[12px] border border-white/10 bg-white/5 p-5">
                   <div className="flex items-center gap-3 text-[18px] font-semibold">
                     <BrainCircuit className="h-5 w-5 text-[#d5b4ff]" />
                     Tư vấn giải pháp AI
@@ -582,20 +628,20 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[34px] border border-[#eadcff] bg-white p-8 shadow-[0_30px_80px_rgba(86,40,163,0.08)] sm:p-10">
+            <div className="rounded-[17px] border border-[#eadcff] bg-white p-8 shadow-[0_30px_80px_rgba(86,40,163,0.08)] sm:p-10">
               <form className="grid gap-5">
                 <div className="grid gap-5 md:grid-cols-2">
                   <label className="grid gap-2">
                     <span className="text-[14px] font-semibold text-[#4b376d]">Họ và tên</span>
                     <input
-                      className="rounded-2xl border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
+                      className="rounded-[8px] border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
                       placeholder="Nguyễn Văn A"
                     />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-[14px] font-semibold text-[#4b376d]">Số điện thoại</span>
                     <input
-                      className="rounded-2xl border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
+                      className="rounded-[8px] border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
                       placeholder="0901 234 567"
                     />
                   </label>
@@ -604,13 +650,13 @@ export default function Home() {
                   <label className="grid gap-2">
                     <span className="text-[14px] font-semibold text-[#4b376d]">Email</span>
                     <input
-                      className="rounded-2xl border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
+                      className="rounded-[8px] border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
                       placeholder="ban@congty.vn"
                     />
                   </label>
                   <label className="grid gap-2">
                     <span className="text-[14px] font-semibold text-[#4b376d]">Nhu cầu chính</span>
-                    <select className="rounded-2xl border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]">
+                    <select className="rounded-[8px] border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]">
                       <option>Demo robot Dodomio</option>
                       <option>Pre-order robot</option>
                       <option>Công chức.ai</option>
@@ -622,7 +668,7 @@ export default function Home() {
                   <span className="text-[14px] font-semibold text-[#4b376d]">Mô tả nhu cầu</span>
                   <textarea
                     rows={6}
-                    className="rounded-3xl border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
+                    className="rounded-[12px] border border-[#e6d7ff] px-4 py-4 outline-none transition focus:border-[#7a2ee6]"
                     placeholder="Bạn muốn dùng robot cho bối cảnh nào, hoặc cần AI hỗ trợ quy trình gì?"
                   />
                 </label>
@@ -644,22 +690,75 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-[#ecdfff] bg-white">
-        <div className="mx-auto flex max-w-[1240px] flex-col gap-8 px-5 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <div className="flex items-center gap-4">
-            <Image
-              src="/images/dodo/dodomio-logo.png"
-              alt="DODOMIO Robotics"
-              width={132}
-              height={66}
-              className="h-auto w-[110px]"
-            />
-            <p className="max-w-[420px] text-[15px] leading-7 text-[#6c5d86]">
-              DODOMIO WEBSITE được tái cấu trúc thành landing page giới thiệu robot + AI với CTA rõ ràng cho pre-order và demo.
-            </p>
+      <footer className="border-t border-[#ecdfff] bg-[#f6f1f1]">
+        <div className="mx-auto max-w-[1240px] px-5 py-9 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-[1.25fr_0.95fr] lg:gap-16">
+            <div>
+              <Image
+                src="/images/dodo/dodomio-logo.png"
+                alt="DODOMIO Robotics"
+                width={240}
+                height={120}
+                className="h-auto w-[180px]"
+              />
+
+              <div className="mt-8 space-y-4">
+                {footerContacts.map(({ label, icon: Icon }) => (
+                  <div key={label} className="flex items-start gap-3 text-[16px] font-semibold text-[#5f5375]">
+                    <span className="mt-0.5 flex h-6 w-6 items-center justify-center rounded-full bg-[#f4ecff] text-[#8a47eb]">
+                      <Icon className="h-3.5 w-3.5" />
+                    </span>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-6 lg:items-start lg:justify-start">
+              <div className="space-y-3 text-[#3b295d]">
+                <p className="text-[18px] font-black leading-tight sm:text-[22px]">
+                  Đơn vị chủ quản: Công ty Cổ Phần A
+                </p>
+                <p className="text-[16px] font-bold">Người đại diện: Nguyễn Văn A</p>
+                <p className="text-[16px] font-bold">MST: 0106435454</p>
+              </div>
+
+              <div className="inline-flex items-center gap-3 rounded-[14px] px-4 py-3 text-[#4f3780]">
+               
+              
+                  <Image
+                    src="/images/dodo/cong_thuong.webp"
+                    alt="Bộ Công Thương"
+                    width={256}
+                    height={97}
+                    className="mt-1 h-auto w-[200px]"
+                  />
+              
+              </div>
+            </div>
           </div>
-          <div className="text-[14px] font-medium text-[#806fa0]">© 2026 DODOMIO Robotics. All rights reserved.</div>
+
+          <div className="mt-10 border-t border-[#eadcff]" />
+          <div className="pt-8 text-center text-[15px] font-semibold text-[#7a6b95]">
+            ©2026 All rights reserved dodo.stepup.edu.vn
+          </div>
         </div>
+
+        <Link
+          href="https://zalo.me/0853675166"
+          aria-label="Liên hệ qua Zalo"
+          target="_blank"
+          rel="noreferrer"
+          className="fixed bottom-6 right-5 z-30 flex h-16 w-16 items-center justify-center"
+        >
+          <Image
+            src="/images/dodo/zalo_icon.webp"
+            alt="Zalo"
+            width={128}
+            height={128}
+            className="h-13 w-13 object-contain"
+          />
+        </Link>
       </footer>
     </main>
   );
